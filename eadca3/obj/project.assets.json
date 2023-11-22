@@ -1806,11 +1806,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/katrinamurphy/Library/CloudStorage/OneDrive-TechnologicalUniversityDublin/4th Year/EAD1/eadca3/eadca3/eadca3.csproj",
+      "projectUniqueName": "/Users/katrinamurphy/Library/CloudStorage/OneDrive-TechnologicalUniversityDublin/4th Year/EAD1/CA3/eadca3/eadca3/eadca3.csproj",
       "projectName": "eadca3",
-      "projectPath": "/Users/katrinamurphy/Library/CloudStorage/OneDrive-TechnologicalUniversityDublin/4th Year/EAD1/eadca3/eadca3/eadca3.csproj",
+      "projectPath": "/Users/katrinamurphy/Library/CloudStorage/OneDrive-TechnologicalUniversityDublin/4th Year/EAD1/CA3/eadca3/eadca3/eadca3.csproj",
       "packagesPath": "/Users/katrinamurphy/.nuget/packages/",
-      "outputPath": "/Users/katrinamurphy/Library/CloudStorage/OneDrive-TechnologicalUniversityDublin/4th Year/EAD1/eadca3/eadca3/obj/",
+      "outputPath": "/Users/katrinamurphy/Library/CloudStorage/OneDrive-TechnologicalUniversityDublin/4th Year/EAD1/CA3/eadca3/eadca3/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/katrinamurphy/.nuget/NuGet/NuGet.Config"

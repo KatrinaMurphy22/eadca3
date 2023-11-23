@@ -1646,7 +1646,6 @@
 /Users/katrinamurphy/Library/CloudStorage/OneDrive-TechnologicalUniversityDublin/4th Year/EAD1/CA3/eadca3/eadca3/obj/Debug/net7.0/staticwebassets.build.json
 /Users/katrinamurphy/Library/CloudStorage/OneDrive-TechnologicalUniversityDublin/4th Year/EAD1/CA3/eadca3/eadca3/obj/Debug/net7.0/staticwebassets.development.json
 /Users/katrinamurphy/Library/CloudStorage/OneDrive-TechnologicalUniversityDublin/4th Year/EAD1/CA3/eadca3/eadca3/obj/Debug/net7.0/scopedcss/Shared/MainLayout.razor.rz.scp.css
-/Users/katrinamurphy/Library/CloudStorage/OneDrive-TechnologicalUniversityDublin/4th Year/EAD1/CA3/eadca3/eadca3/obj/Debug/net7.0/scopedcss/Shared/NavMenu.razor.rz.scp.css
 /Users/katrinamurphy/Library/CloudStorage/OneDrive-TechnologicalUniversityDublin/4th Year/EAD1/CA3/eadca3/eadca3/obj/Debug/net7.0/scopedcss/bundle/eadca3.styles.css
 /Users/katrinamurphy/Library/CloudStorage/OneDrive-TechnologicalUniversityDublin/4th Year/EAD1/CA3/eadca3/eadca3/obj/Debug/net7.0/scopedcss/projectbundle/eadca3.bundle.scp.css
 /Users/katrinamurphy/Library/CloudStorage/OneDrive-TechnologicalUniversityDublin/4th Year/EAD1/CA3/eadca3/eadca3/obj/Debug/net7.0/eadca3.csproj.CopyComplete

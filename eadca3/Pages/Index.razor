@@ -3,7 +3,7 @@
 @inject HttpClient Http
 
 
-<PageTitle>Cats</PageTitle>
+<PageTitle>Catstagram</PageTitle>
 
 
 @if (data == null)
@@ -12,17 +12,32 @@
 }
 else
 {
-    <h1>Cats</h1>
+    <div class="container">
+        <div class="row">
 
-    @foreach (var entry in data)
-    {
-        
-        <img src="@entry.url" width="500" height="600" />
-        <button class="btn btn-primary" @onclick="entry.LikeCat">Like!</button>
-        <p role="status">Likes: @entry.favCount</p>
-    }
-
-
+            <div class="col-md-9">
+                @foreach (var entry in data)
+                {
+                    <div class="border border-white">
+                        <img src="@entry.url" width="500" height="600" class="rounded" align="middle"/>
+                        <button class="btn btn-danger" @onclick="@(() => likeCat1(entry))">Like!</button>
+                        <p role="status" class="text-left">Likes: @entry.favCount</p>
+                        <p class="text-left">Weight: @entry.width</p>
+                        <p class="text-left">Height: @entry.height</p>
+                    </div>
+                }
+            </div>
+            <div class="col-md-3">
+                <h2>Favourites</h2>
+                @foreach (var entry in favourites)
+                {
+                    <div class="border border-light">
+                        <img src="@entry.url" width="250" height="300" class="rounded" />
+                    </div>
+                   }
+            </div>
+        </div>
+    </div>
 }
 
 
@@ -33,7 +48,7 @@ else
     {
         try
         {
-            data = await Http.GetFromJsonAsync<Cats[]>("https://api.thecatapi.com/v1/images/search?limit=50&api_key=live_ZkrwaSSO3rrHcXFVGYQJ9IhvRMi6xGuDcUXRM24aKUZwy8OWWOm0ler41bycfPFF");
+            data = await Http.GetFromJsonAsync<Cats[]>("https://api.thecatapi.com/v1/images/search?limit=20&api_key=live_ZkrwaSSO3rrHcXFVGYQJ9IhvRMi6xGuDcUXRM24aKUZwy8OWWOm0ler41bycfPFF");
         }
         catch (Exception e)
         {
@@ -41,6 +56,14 @@ else
             throw e;
         }
 
+    }
+
+    public List<Cats> favourites = new();
+
+    public void likeCat1(Cats c)
+    {
+        favourites.Add(c);
+        c.favCount++;
     }
 
     public class Cats
@@ -52,16 +75,6 @@ else
         public int width { get; set; }
         public int height { get; set; }
         public int favCount { get; set; }
-
-        public void LikeCat()
-        {
-            favCount++;
-        }
-
-        public void Sort()
-        {
-            
-        }
     }
 
 }

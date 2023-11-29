@@ -62,7 +62,11 @@ else
 
     public void likeCat1(Cats c)
     {
-        favourites.Add(c);
+        if (!favourites.Contains(c))
+        {
+            favourites.Add(c);
+        }
+        
         c.favCount++;
     }
 

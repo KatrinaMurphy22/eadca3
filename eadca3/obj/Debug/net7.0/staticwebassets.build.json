@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hF7P4Hzi5sBqQNkHieHLsUEEUa7rsO2CdD8e1w0f+6g=",
+  "Hash": "VA7fLalKStUPOSJgAcDTthCpgcm4AN8a3/R+YHGmveE=",
   "Source": "eadca3",
   "BasePath": "/",
   "Mode": "Root",
@@ -7106,12 +7106,12 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/README.md"
     },
     {
-      "Identity": "/Users/katrinamurphy/Library/CloudStorage/OneDrive-TechnologicalUniversityDublin/4th Year/EAD1/CA3/eadca3/eadca3/wwwroot/favicon.png",
+      "Identity": "/Users/katrinamurphy/Library/CloudStorage/OneDrive-TechnologicalUniversityDublin/4th Year/EAD1/CA3/eadca3/eadca3/wwwroot/favicon1.png",
       "SourceId": "eadca3",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/katrinamurphy/Library/CloudStorage/OneDrive-TechnologicalUniversityDublin/4th Year/EAD1/CA3/eadca3/eadca3/wwwroot/",
       "BasePath": "/",
-      "RelativePath": "favicon.png",
+      "RelativePath": "favicon1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -7120,7 +7120,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/favicon.png"
+      "OriginalItemSpec": "wwwroot/favicon1.png"
     },
     {
       "Identity": "/Users/katrinamurphy/Library/CloudStorage/OneDrive-TechnologicalUniversityDublin/4th Year/EAD1/CA3/eadca3/eadca3/wwwroot/icon-192.png",

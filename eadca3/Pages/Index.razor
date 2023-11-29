@@ -15,7 +15,7 @@ else
     <div class="container">
         <div class="row">
 
-            <div class="col-md-9">
+            <div class="col-md-8">
                 @foreach (var entry in data)
                 {
                     <div class="border border-white">
@@ -28,15 +28,25 @@ else
                     </div>
                 }
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <h2>Favourites</h2>
-                @foreach (var entry in favourites)
-                {
-                    <div class="border border-light">
-                        <img src="@entry.url" width="250" height="300" class="rounded" />
+                @if (favourites.Count == 0)
+                    {
+                    <div class="border border-white">
+                        <p>Pick some favourites</p>
                     </div>
-                   }
-            </div>
+                    }
+                    else
+                    {
+                    @foreach (var entry in favourites)
+                        {
+                        <div class="border border-white">
+                            <img src="@entry.url" width="250" height="300" class="rounded" />
+                            <button class="btn btn-primary" @onclick="@(() => unfavouriteCat(entry))">Remove</button>
+                        </div>
+                        }
+                    }
+                </div>
         </div>
     </div>
 }
@@ -45,43 +55,48 @@ else
 @code {
     private Cats[] data;
 
-    protected override async Task OnInitializedAsync()
-    {
-        try
+        protected override async Task OnInitializedAsync()
         {
-            data = await Http.GetFromJsonAsync<Cats[]>("https://api.thecatapi.com/v1/images/search?limit=20&api_key=live_ZkrwaSSO3rrHcXFVGYQJ9IhvRMi6xGuDcUXRM24aKUZwy8OWWOm0ler41bycfPFF");
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
-            throw e;
+            try
+            {
+                data = await Http.GetFromJsonAsync<Cats[]>("https://api.thecatapi.com/v1/images/search?limit=20&api_key=live_ZkrwaSSO3rrHcXFVGYQJ9IhvRMi6xGuDcUXRM24aKUZwy8OWWOm0ler41bycfPFF");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw e;
+            }
+
         }
 
-    }
+        public List<Cats> favourites = new();
 
-    public List<Cats> favourites = new();
-
-    public void favouriteCat(Cats c)
-    {
-        if (!favourites.Contains(c))
+        public void favouriteCat(Cats c)
         {
-            favourites.Add(c);
+            if (!favourites.Contains(c))
+            {
+                favourites.Add(c);
+            }
         }
-    }
+
+        public void unfavouriteCat(Cats c)
+        {
+            favourites.Remove(c);
+         }
 
     public class Cats
-    {
-
-        public List<object> breeds { get; set; }
-        public string id { get; set; }
-        public string url { get; set; }
-        public int width { get; set; }
-        public int height { get; set; }
-        public int favCount { get; set; }
-
-        public void likeCat()
         {
-            favCount++;
+
+            public List<object> breeds { get; set; }
+            public string id { get; set; }
+            public string url { get; set; }
+            public int width { get; set; }
+            public int height { get; set; }
+            public int favCount { get; set; }
+
+            public void likeCat()
+            {
+                favCount++;
+            }
         }
-    }
     }

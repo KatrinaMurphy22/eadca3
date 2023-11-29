@@ -19,10 +19,11 @@ else
                 @foreach (var entry in data)
                 {
                     <div class="border border-white">
-                        <img src="@entry.url" width="500" height="600" class="rounded" align="middle"/>
-                        <button class="btn btn-danger" @onclick="@(() => likeCat1(entry))">Like!</button>
+                        <img src="@entry.url" width="500" height="600" class="rounded" align="middle" />
+                        <button class="btn btn-danger" @onclick=entry.likeCat>Like!</button>
+                        <button class="btn btn-primary" @onclick="@(() => favouriteCat(entry))">Favourite</button>
                         <p role="status" class="text-left">Likes: @entry.favCount</p>
-                        <p class="text-left">Weight: @entry.width</p>
+                  <p class="text-left">Weight: @entry.width</p>
                         <p class="text-left">Height: @entry.height</p>
                     </div>
                 }
@@ -60,14 +61,12 @@ else
 
     public List<Cats> favourites = new();
 
-    public void likeCat1(Cats c)
+    public void favouriteCat(Cats c)
     {
         if (!favourites.Contains(c))
         {
             favourites.Add(c);
         }
-        
-        c.favCount++;
     }
 
     public class Cats
@@ -79,6 +78,10 @@ else
         public int width { get; set; }
         public int height { get; set; }
         public int favCount { get; set; }
-    }
 
-}
+        public void likeCat()
+        {
+            favCount++;
+        }
+    }
+    }

@@ -23,12 +23,13 @@ else
                         <button class="btn btn-danger" @onclick=entry.likeCat>Like!</button>
                         <button class="btn btn-primary" @onclick="@(() => favouriteCat(entry))">Favourite</button>
                         <p role="status" class="text-left">Likes: @entry.favCount</p>
-                  <p class="text-left">Weight: @entry.width</p>
+                        <p class="text-left">Weight: @entry.width</p>
                         <p class="text-left">Height: @entry.height</p>
                     </div>
+              
                 }
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 fixed float-md-right" style="">
                 <h2>Favourites</h2>
                 @if (favourites.Count == 0)
                     {
@@ -55,48 +56,48 @@ else
 @code {
     private Cats[] data;
 
-        protected override async Task OnInitializedAsync()
+    protected override async Task OnInitializedAsync()
+    {
+        try
         {
-            try
-            {
-                data = await Http.GetFromJsonAsync<Cats[]>("https://api.thecatapi.com/v1/images/search?limit=20&api_key=live_ZkrwaSSO3rrHcXFVGYQJ9IhvRMi6xGuDcUXRM24aKUZwy8OWWOm0ler41bycfPFF");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                throw e;
-            }
-
+            data = await Http.GetFromJsonAsync<Cats[]>("https://api.thecatapi.com/v1/images/search?limit=20&api_key=live_ZkrwaSSO3rrHcXFVGYQJ9IhvRMi6xGuDcUXRM24aKUZwy8OWWOm0ler41bycfPFF");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+            throw e;
         }
 
-        public List<Cats> favourites = new();
+    }
 
-        public void favouriteCat(Cats c)
+    public List<Cats> favourites = new();
+
+    public void favouriteCat(Cats c)
+    {
+        if (!favourites.Contains(c))
         {
-            if (!favourites.Contains(c))
-            {
-                favourites.Add(c);
-            }
+            favourites.Add(c);
         }
+    }
 
-        public void unfavouriteCat(Cats c)
-        {
-            favourites.Remove(c);
-         }
+    public void unfavouriteCat(Cats c)
+    {
+        favourites.Remove(c);
+    }
 
     public class Cats
+    {
+
+        public List<object> breeds { get; set; }
+        public string id { get; set; }
+        public string url { get; set; }
+        public int width { get; set; }
+        public int height { get; set; }
+        public int favCount { get; set; }
+
+        public void likeCat()
         {
-
-            public List<object> breeds { get; set; }
-            public string id { get; set; }
-            public string url { get; set; }
-            public int width { get; set; }
-            public int height { get; set; }
-            public int favCount { get; set; }
-
-            public void likeCat()
-            {
-                favCount++;
-            }
+            favCount++;
         }
+    }
     }

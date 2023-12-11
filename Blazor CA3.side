@@ -1,0 +1,215 @@
+{
+  "id": "7f0cd3d0-a008-4b7b-af7f-3b9b401832ee",
+  "version": "2.0",
+  "name": "Blazor CA3",
+  "url": "https://happy-river-075342310.4.azurestaticapps.net",
+  "tests": [{
+    "id": "e6281406-9034-4253-af96-44146f99104e",
+    "name": "test_title",
+    "commands": [{
+      "id": "aaf50bcc-eec5-474c-8cc4-ed0ed7fbfd12",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1dd1fa62-460e-48e9-93bf-24af4948090a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x976",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f158a41d-8e76-435f-8aba-916232448bac",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Catstagram')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "380febd7-1034-4a1b-82cd-d2b0c6cbfd1e",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Catstagram",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0ff36c30-837b-4829-b326-0368f8c2ef85",
+    "name": "test_favourite",
+    "commands": [{
+      "id": "16ebfbc8-2035-41c7-818f-4e92a73deff5",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e3070de-9638-4713-a6c5-6d7269679fd0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x976",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6821d447-06c4-421c-8b6c-883791794d62",
+      "comment": "",
+      "command": "click",
+      "target": "css=.border:nth-child(1) > .btn-primary",
+      "targets": [
+        ["css=.border:nth-child(1) > .btn-primary", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/article/div/div/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Favourite')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b67a6808-4178-4a86-849a-71a78eab888b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.col-md-4 .rounded",
+      "targets": [
+        ["css=.col-md-4 .rounded", "css:finder"],
+        ["xpath=(//img[contains(@src,'https://cdn2.thecatapi.com/images/10q.jpg')])[2]", "xpath:img"],
+        ["xpath=//div[@id='app']/div/main/article/div/div/div[2]/div/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "8f6fe553-5874-435b-9f2e-c404ecc7087c",
+    "name": "test_labels",
+    "commands": [{
+      "id": "eae0142b-8b5f-4ff7-9e0f-4cc463e18858",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "65cd3404-e164-4878-aec8-f3a74cee7333",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x976",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e705747-3169-45db-a09e-16e4cfc3ad7f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.border:nth-child(1) > .text-left:nth-child(4)",
+      "targets": [
+        ["css=.border:nth-child(1) > .text-left:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/article/div/div/div/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Likes: 0')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e19cbf30-c86a-42a9-811e-9e7cbef15239",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.border:nth-child(1) > .text-left:nth-child(4)",
+      "targets": [
+        ["css=.border:nth-child(1) > .text-left:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/article/div/div/div/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Likes: 0')]", "xpath:innerText"]
+      ],
+      "value": "Likes: 0"
+    }]
+  }, {
+    "id": "72a7a8c9-a48c-4e58-b316-8fac2482019f",
+    "name": "test_likes",
+    "commands": [{
+      "id": "9d810883-bd29-4587-8e6c-bdc00bde1875",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fbe142ac-050a-41f9-9dcb-b67f659c25b1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x976",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a543a93-ed3b-4e25-89f4-27ed6198d4f6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.border:nth-child(1) > .btn-danger",
+      "targets": [
+        ["css=.border:nth-child(1) > .btn-danger", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/article/div/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Like!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "824a4a94-e3f4-43c2-a51d-a535251ef65d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.border:nth-child(1) > .btn-danger",
+      "targets": [
+        ["css=.border:nth-child(1) > .btn-danger", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/article/div/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Like!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6626339-f337-46a7-a088-8c3c26822ec3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.border:nth-child(1) > .btn-danger",
+      "targets": [
+        ["css=.border:nth-child(1) > .btn-danger", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/article/div/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Like!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8483e058-fa55-4e56-8535-11bbf4875938",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md-8",
+      "targets": [
+        ["css=.col-md-8", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/article/div/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "11e5b031-19a5-4850-829a-717b851ed10e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.border:nth-child(1) > .text-left:nth-child(4)",
+      "targets": [
+        ["css=.border:nth-child(1) > .text-left:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/article/div/div/div/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Likes: 3')]", "xpath:innerText"]
+      ],
+      "value": "Likes: 3"
+    }]
+  }],
+  "suites": [{
+    "id": "3154e484-b4ea-4edf-9413-f4fe22e96772",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e6281406-9034-4253-af96-44146f99104e"]
+  }],
+  "urls": ["https://happy-river-075342310.4.azurestaticapps.net/"],
+  "plugins": []
+}
